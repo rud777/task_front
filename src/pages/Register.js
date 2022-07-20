@@ -32,7 +32,7 @@ function Register(props) {
           <input type="checkbox" id="chk" aria-hidden="true"/>
           <div className="signup">
             <form onSubmit={handleSubmit}>
-              <label htmlFor="chk" aria-hidden="true">ADD Workers</label>
+              <label htmlFor="chk" aria-hidden="true">Create Workers</label>
               <Input type="text" name="firstName" placeholder="Firts Name" required=""
                      value={formData.firstName || ''}
                      onChange={(ev) => handleChange('firstName', ev.target.value)}
@@ -79,7 +79,7 @@ function Register(props) {
                      onChange={(ev) => handleChange('password', ev.target.value)}
                      error={errors.password}
               />
-              <button>Sign up</button>
+              <button>Create</button>
             </form>
           </div>
         </div>

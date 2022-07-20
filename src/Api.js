@@ -30,26 +30,21 @@ class Api {
   static login(data = {}) {
     return api.post('/users/login', { ...data })
   }
-
-  static myAccount() {
-    return api.get('/users/account/me',)
+  static create(data={}){
+    return api.post('/project/create',{...data})
   }
-
-  static getUsersList(s) {
-    return api.get('/users/list', {
+  static getProjectsList(s){
+    return api.get('/project/list',{
       params: { s }
     })
   }
-  static getAccount(userId) {
-    return api.get(`/users/account/${userId}`);
+  static projectUpdate(data={}){
+    return api.put(`/project/update`,{data})
   }
-  static userUpdate(data={}){
-    console.log(data)
-    return api.put(`/users/update`,{data})
+  static projectDelete(data={}){
+    return api.delete(`/project/delete/${data}`,)
   }
-  static userDelete(id){
-    return api.delete(`/users/delete/${id}`)
-  }
+
 }
 
 export default Api

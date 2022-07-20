@@ -12,11 +12,11 @@ function Headers(props) {
         dispatch(logOut())
         window.location.href = '/'
     }
-    console.log(account)
+
     return (
         <div>
             <div className='headerDiv'>
-            <button onClick={hendleClick} className='addUser'>ADD Workers</button>
+                {account.role==='admin'?<button onClick={hendleClick} className='addUser'>Create Workers</button>:null}
             <button onClick={hendleLogOut} className='addUser'>Log Out</button>
             <img src={account.avatar} className='avatar'/>
                 <h1 className='name'>{account.firstName} {account.lastName}</h1>
