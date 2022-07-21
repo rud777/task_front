@@ -54,7 +54,7 @@ const hendleUpdate = () => {
 
         if (err) {
             setErrors(err.errors)
-            toast.error(`Invalid Params`)
+            toast.error(`Not value`)
         }
         if (data?.status === 'ok') {
             window.location.href = '/home'
@@ -80,7 +80,7 @@ const hendleDelete = (id) => {
             <ul className="list">
                 {projectList.map((p) => (
                     < div className='buttens' key={p.id}>
-                        <li className='liList'><Link className="_link" to='/taskes'>{p.projectTitle}</Link></li>
+                        <li className='liList'><Link className="_link" to={`/taskes/${p.id}`}>{p.projectTitle}</Link></li>
                         <button className='projectUp' onClick={()=>hendleShow(p.id)}>Update</button>
                         <button className='projectDell' onClick={()=>hendleDelete(p.id)}>Delete</button>
                         {update?<Modal

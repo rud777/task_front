@@ -44,6 +44,17 @@ class Api {
   static projectDelete(data={}){
     return api.delete(`/project/delete/${data}`,)
   }
+  static createTaskes(data={}){
+    return api.post('/taskes/create',{...data})
+  }
+  static  getTaskesList(ProjectId){
+    return api.get(`/taskes/list`,{
+      params:{ProjectId}
+    })
+  }
+  static taskesUpdate(data={}){
+    return api.put(`/taskes/update`,{data})
+  }
 
 }
 

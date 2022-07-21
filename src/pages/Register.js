@@ -25,7 +25,7 @@ function Register(props) {
       }
     }))
   }
-
+  console.log(formData)
   return (
       <div className='wraper'>
         <div className="main">
@@ -59,7 +59,7 @@ function Register(props) {
                 <div className='divchek2'>
                   <Input type="radio" name="gender" id='female' required=""
                          value={formData.gender || 'female'}
-                         onChange={(ev) => handleChange('female', ev.target.value)}
+                         onChange={(ev) => handleChange('gender', ev.target.value)}
                   />
                   <label htmlFor="female" className='gender'>Female</label>
                 </div>

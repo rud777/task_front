@@ -17,17 +17,10 @@ export default function* watcher() {
 
 }
 
-
-
-
-
-
-
-
-
 function* handleAddUser(action) {
     try {
         const {formData} = action.payload;
+        console.log(formData)
         const {data} = yield call(Api.register, formData);
 
         yield put({

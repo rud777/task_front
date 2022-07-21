@@ -215,3 +215,20 @@ button:hover {
     text-decoration: none;
     color: black;
 }
+.select{
+    margin-right: 22px;
+    height: 37px;
+    margin-top: 15px;
+}
+.liListTaskes{
+    font-size: 17px;
+}
+.selectModal{
+    margin-left: 525px;
+    width: 219px;
+    height: 50px;
+}
+.status{
+    width: 15%;
+    margin-top: unset;
+}
